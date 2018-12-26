@@ -1,20 +1,10 @@
 stages:
-- name: publish
+- name: 啊啊啊
   steps:
-  - publishCatalogConfig:
-      path: ./mongodb/latest
-      catalog: mongodb
-      version: latest汉字
-      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
-      gitBranch: master
-      gitAuthor: rootwuj
-      gitEmail: jing@rancher.com
-    envFrom:
-    - sourceName: s-9dz92
-      sourceKey: USERNAME
-      targetKey: USERNAME
-    - sourceName: s-9dz92
-      sourceKey: PASSWORD
-      targetKey: PASSWORD
+  - applyAppConfig:
+      catalog: wading
+      version: bbb
+      name: aaa
+      targetNamespace: default
 timeout: 60
 notification: {}
