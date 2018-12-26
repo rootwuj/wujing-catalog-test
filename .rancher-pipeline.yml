@@ -2,9 +2,9 @@ stages:
 - name: publish
   steps:
   - publishCatalogConfig:
-      path: ./mongodb/v2.0.2
+      path: ./mongodb/latest
       catalog: mongodb
-      version: v2.0.2
+      version: latest
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: rootwuj
