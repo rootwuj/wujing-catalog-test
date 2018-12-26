@@ -2,9 +2,9 @@ stages:
 - name: publish
   steps:
   - publishCatalogConfig:
-      path: ./mysql/v0.3.7
-      catalog: mysql
-      version: v0.3.7
+      path: ./mongodb/v2.0.2
+      catalog: mongodb
+      version: v2.0.2
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: rootwuj
