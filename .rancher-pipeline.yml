@@ -3,8 +3,8 @@ stages:
   steps:
   - publishCatalogConfig:
       path: ./mongodb/latest
-      catalog: mongodb@#¥#@%@#5
-      version: latest
+      catalog: mongodb
+      version: latest汉字
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: rootwuj
