@@ -10,10 +10,10 @@ stages:
       gitAuthor: aaa
       gitEmail: aaa@qq.com
     envFrom:
-    - sourceName: s-9dz92
+    - sourceName: mina
       sourceKey: USERNAME
       targetKey: USERNAME
-    - sourceName: s-9dz92
+    - sourceName: mina
       sourceKey: PASSWORD
       targetKey: PASSWORD
 - name: publish2
