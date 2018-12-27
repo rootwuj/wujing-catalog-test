@@ -9,6 +9,8 @@ stages:
       gitBranch: master
       gitAuthor: aaa
       gitEmail: aaa@qq.com
+    env:
+      elasticsearch.master.persistence.storageClass: nsfaaa
     envFrom:
     - sourceName: mima
       sourceKey: USERNAME
@@ -17,9 +19,7 @@ stages:
       sourceKey: PASSWORD
       targetKey: PASSWORD
     when:
-      branch:
-        include:
-        - v1
+      branch: {}
 - name: publish2
   steps:
   - publishCatalogConfig:
