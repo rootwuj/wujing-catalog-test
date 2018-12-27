@@ -16,6 +16,10 @@ stages:
     - sourceName: mima
       sourceKey: PASSWORD
       targetKey: PASSWORD
+    when:
+      branch:
+        include:
+        - v1
 - name: publish2
   steps:
   - publishCatalogConfig:
