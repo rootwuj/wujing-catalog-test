@@ -31,11 +31,8 @@ stages:
       gitAuthor: bb
       gitEmail: bb@rancher.com
     envFrom:
-    - sourceName: mima
-      sourceKey: USERNAME
-      targetKey: USERNAME
-    - sourceName: mima
-      sourceKey: PASSWORD
-      targetKey: PASSWORD
+    - sourceName: key
+      sourceKey: DEPLOY_KEY
+      targetKey: DEPLOY_KEY
 timeout: 60
 notification: {}
