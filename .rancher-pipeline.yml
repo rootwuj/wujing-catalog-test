@@ -6,7 +6,7 @@ stages:
       catalog: efk
       version: v0.1.2
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
-      gitBranch: v1.0
+      gitBranch: master
       gitAuthor: aaa
       gitEmail: aaa@qq.com
     envFrom:
@@ -23,7 +23,7 @@ stages:
       catalog: efk
       version: v0.1.3
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
-      gitBranch: v1.0
+      gitBranch: master
       gitAuthor: bb
       gitEmail: bb@rancher.com
     envFrom:
