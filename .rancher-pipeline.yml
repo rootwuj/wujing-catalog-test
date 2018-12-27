@@ -10,10 +10,10 @@ stages:
       gitAuthor: aaa
       gitEmail: aaa@qq.com
     envFrom:
-    - sourceName: mina
+    - sourceName: mima
       sourceKey: USERNAME
       targetKey: USERNAME
-    - sourceName: mina
+    - sourceName: mima
       sourceKey: PASSWORD
       targetKey: PASSWORD
 - name: publish2
@@ -27,10 +27,10 @@ stages:
       gitAuthor: bb
       gitEmail: bb@rancher.com
     envFrom:
-    - sourceName: s-9dz92
+    - sourceName: mima
       sourceKey: USERNAME
       targetKey: USERNAME
-    - sourceName: s-9dz92
+    - sourceName: mima
       sourceKey: PASSWORD
       targetKey: PASSWORD
 timeout: 60
