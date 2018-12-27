@@ -41,6 +41,7 @@ questions:
     type: string
     label: Fluent-Bit Image Tag
 # elasticsearch settings
+# wujing is a tester
 - variable: elasticsearch.master.heapSize
   default: "512m"
   description: "The value depends on the amount of RAM available on your server"
