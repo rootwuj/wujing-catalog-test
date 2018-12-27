@@ -16,5 +16,22 @@ stages:
     - sourceName: s-9dz92
       sourceKey: PASSWORD
       targetKey: PASSWORD
+- name: publish2
+  steps:
+  - publishCatalogConfig:
+      path: ./efk/v0.1.3
+      catalog: efk
+      version: v0.1.3
+      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
+      gitBranch: v1.0
+      gitAuthor: bb
+      gitEmail: bb@rancher.com
+    envFrom:
+    - sourceName: s-9dz92
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: s-9dz92
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 timeout: 60
 notification: {}
