@@ -7,10 +7,10 @@ stages:
       version: latest
       gitUrl: git@github.com:rootwuj/test-catalog-custom.git
       gitBranch: master
-      gitAuthor: ddff
-      gitEmail: ddff@qq.com
+      gitAuthor: test
+      gitEmail: test@rancher.com
     envFrom:
-    - sourceName: "28"
+    - sourceName: ssh-key
       sourceKey: DEPLOY_KEY
       targetKey: DEPLOY_KEY
 timeout: 60
