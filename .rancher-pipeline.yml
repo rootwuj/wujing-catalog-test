@@ -10,7 +10,7 @@ stages:
       gitAuthor: ddff
       gitEmail: ddff@qq.com
     envFrom:
-    - sourceName: "288"
+    - sourceName: "28"
       sourceKey: DEPLOY_KEY
       targetKey: DEPLOY_KEY
 timeout: 60
