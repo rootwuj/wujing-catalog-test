@@ -1,10 +1,17 @@
 stages:
 - name: 部署
   steps:
-  - applyAppConfig:
-      catalog: p-hjdjj:github
-      version: 0.1.3
-      name: c-dw2j7-p-hjdjj-github-efk
-      targetNamespace: default
+  - publishCatalogConfig:
+      path: ./fluentd-aggregator/latest
+      catalog: fluentd-wuj
+      version: latest
+      gitUrl: git@github.com:rootwuj/test-catalog-custom.git
+      gitBranch: master
+      gitAuthor: ddff
+      gitEmail: ddff@qq.com
+    envFrom:
+    - sourceName: key
+      sourceKey: DEPLOY_KEY
+      targetKey: DEPLOY_KEY
 timeout: 60
 notification: {}
