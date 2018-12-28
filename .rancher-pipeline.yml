@@ -1,38 +1,10 @@
 stages:
-- name: publish
+- name: 部署
   steps:
-  - publishCatalogConfig:
-      path: ./efk/v0.1.2
-      catalog: efk
-      version: v0.1.2
-      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
-      gitBranch: master
-      gitAuthor: aaa
-      gitEmail: aaa@qq.com
-    env:
-      elasticsearch.master.persistence.storageClass: nsfaaa
-    envFrom:
-    - sourceName: mima
-      sourceKey: USERNAME
-      targetKey: USERNAME
-    - sourceName: mima
-      sourceKey: PASSWORD
-      targetKey: PASSWORD
-    when:
-      branch: {}
-- name: publish2
-  steps:
-  - publishCatalogConfig:
-      path: ./efk/v0.1.3
-      catalog: efk
-      version: v0.1.3
-      gitUrl: git@github.com:rancher/rancher.git
-      gitBranch: master
-      gitAuthor: bb
-      gitEmail: bb@rancher.com
-    envFrom:
-    - sourceName: key
-      sourceKey: DEPLOY_KEY
-      targetKey: DEPLOY_KEY
+  - applyAppConfig:
+      catalog: p-hjdjj:github
+      version: 0.1.3
+      name: c-dw2j7-p-hjdjj-github-efk
+      targetNamespace: default
 timeout: 60
 notification: {}
