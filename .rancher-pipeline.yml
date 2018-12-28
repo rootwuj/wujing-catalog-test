@@ -1,9 +1,9 @@
 stages:
-- name: 部署
+- name: publish
   steps:
   - publishCatalogConfig:
       path: ./fluentd-aggregator/latest
-      catalog: fluentd-wuj
+      catalog: fluentd
       version: latest
       gitUrl: git@github.com:rootwuj/test-catalog-custom.git
       gitBranch: master
