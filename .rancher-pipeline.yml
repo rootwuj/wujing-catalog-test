@@ -13,5 +13,12 @@ stages:
     - sourceName: deploy-key
       sourceKey: DEPLOY_KEY
       targetKey: DEPLOY_KEY
+- name: deploy
+  steps:
+  - applyAppConfig:
+      catalog: library
+      version: 3.0.2
+      name: library-redis
+      targetNamespace: default
 timeout: 60
 notification: {}
