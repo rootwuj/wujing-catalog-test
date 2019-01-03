@@ -10,7 +10,7 @@ stages:
       gitAuthor: test
       gitEmail: test@rancher.com
     envFrom:
-    - sourceName: ssh-key
+    - sourceName: key
       sourceKey: DEPLOY_KEY
       targetKey: DEPLOY_KEY
 timeout: 60
