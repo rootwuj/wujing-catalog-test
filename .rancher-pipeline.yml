@@ -5,5 +5,10 @@ stages:
       version: 1.0.7
       name: library-haddop
       targetNamespace: default
+- name: test02
+  steps:
+  - runScriptConfig:
+      image: rancher.io/wujing/busybox
+      shellScript: date -R
 timeout: 60
 notification: {}
