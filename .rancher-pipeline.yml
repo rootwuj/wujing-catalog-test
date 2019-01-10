@@ -1,24 +1,9 @@
 stages:
-- name: publish
-  steps:
-  - publishCatalogConfig:
-      path: ./fluentd-aggregator/latest
-      catalog: fluentd
-      version: latest
-      gitUrl: git@github.com:rootwuj/test-catalog-custom.git
-      gitBranch: master
-      gitAuthor: test
-      gitEmail: test@rancher.com
-    envFrom:
-    - sourceName: deploy-key
-      sourceKey: DEPLOY_KEY
-      targetKey: DEPLOY_KEY
 - name: deploy
   steps:
   - applyAppConfig:
-      catalog: library
-      version: 3.0.2
-      name: library-redis
+      version: 1.0.7
+      name: library-haddop
       targetNamespace: default
 timeout: 60
 notification: {}
