@@ -1,5 +1,5 @@
 stages:
-- name: deploy
+- name: publish
   steps:
   - publishCatalogConfig:
       path: ./mongodb/latest
@@ -16,5 +16,12 @@ stages:
     - sourceName: password
       sourceKey: PASSWORD
       targetKey: PASSWORD
+- name: deploy
+  steps:
+  - applyAppConfig:
+      catalogTemplate: library-longhorn
+      version: 0.3.2
+      name: longwww
+      targetNamespace: default
 timeout: 60
 notification: {}
