@@ -5,13 +5,16 @@ stages:
       path: ./mongodb/latest
       catalogTemplate: mongo
       version: latest
-      gitUrl: git@github.com:rootwuj/test-catalog-custom.git
+      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: wujing
       gitEmail: jing@rancher.com
     envFrom:
-    - sourceName: key
-      sourceKey: DEPLOY_KEY
-      targetKey: DEPLOY_KEY
+    - sourceName: password
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: password
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 timeout: 60
 notification: {}
