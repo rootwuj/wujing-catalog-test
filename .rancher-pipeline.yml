@@ -19,9 +19,9 @@ stages:
 - name: deploy
   steps:
   - applyAppConfig:
-      catalogTemplate: library-longhorn
-      version: 0.3.2
-      name: longwww
+      catalogTemplate: library-mysql
+      version: 0.3.7
+      name: mymkmy
       targetNamespace: default
 timeout: 60
 notification: {}
