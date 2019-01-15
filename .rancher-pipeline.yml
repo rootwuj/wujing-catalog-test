@@ -1,14 +1,17 @@
 stages:
 - name: deploy
   steps:
-  - applyAppConfig:
-      version: 1.0.7
-      name: library-haddop
-      targetNamespace: default
-- name: test02
-  steps:
-  - runScriptConfig:
-      image: rancher.io/wujing/busybox
-      shellScript: date -R
+  - publishCatalogConfig:
+      path: ./mongodb/latest
+      catalogTemplate: mongo
+      version: latest
+      gitUrl: git@github.com:rootwuj/test-catalog-custom.git
+      gitBranch: master
+      gitAuthor: wujing
+      gitEmail: jing@rancher.com
+    envFrom:
+    - sourceName: key
+      sourceKey: DEPLOY_KEY
+      targetKey: DEPLOY_KEY
 timeout: 60
 notification: {}
