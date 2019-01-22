@@ -5,16 +5,19 @@ stages:
       catalogTemplate: cattle-global-data:library-mariadb
       version: 5.0.9
       answers:
-        Enable MariaDB Replication: "True"
-        Enable Metrics: "False"
-        Enable Persistent Volume for MariaDB Master Pod: "False"
-        Enable Persistent Volume for MariaDB Slave: "False"
-        MariaDB Database Name: my_database
-        MariaDB Database Password: admin
-        MariaDB Database User: admin
-        MariaDB Replica Count: "2"
-        MariaDB Service Type: NodePort
-        Use Default Image: "True"
+        db.name: my_database
+        db.password: admin
+        db.user: admin
+        defaultImage: "true"
+        image.repository: bitnami/mariadb
+        image.tag: 10.1.36-debian-9
+        master.persistence.enabled: "false"
+        master.persistence.size: 8Gi
+        metrics.image: prom/mysqld-exporter
+        metrics.imageTag: v0.10.0
+        replication.enabled: "true"
+        slave.persistence.enabled: "false"
+        slave.replicas: "2"
       name: MariaDB-aa
       targetNamespace: default
 timeout: 60
