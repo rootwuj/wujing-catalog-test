@@ -23,5 +23,16 @@ stages:
         slave.replicas: "2"
       name: test-mariadb
       targetNamespace: default
+    when:
+      branch:
+        include:
+        - aa
+- name: mysql
+  steps:
+  - applyAppConfig:
+      catalogTemplate: p-jnrpd:test-mysql
+      version: 0.10.2
+      name: mysql-a
+      targetNamespace: default
 timeout: 60
 notification: {}
