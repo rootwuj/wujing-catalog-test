@@ -4,6 +4,17 @@ stages:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:library-mariadb
       version: 5.0.9
+      answers:
+        Enable MariaDB Replication: "True"
+        Enable Metrics: "False"
+        Enable Persistent Volume for MariaDB Master Pod: "False"
+        Enable Persistent Volume for MariaDB Slave: "False"
+        MariaDB Database Name: my_database
+        MariaDB Database Password: admin
+        MariaDB Database User: admin
+        MariaDB Replica Count: "2"
+        MariaDB Service Type: NodePort
+        Use Default Image: "True"
       name: MariaDB-aa
       targetNamespace: default
 timeout: 60
