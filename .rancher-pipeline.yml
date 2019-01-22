@@ -13,10 +13,13 @@ stages:
         image.tag: 10.1.36-debian-9
         master.persistence.enabled: "false"
         master.persistence.size: 8Gi
+        metrics.enabled: "false"
         metrics.image: prom/mysqld-exporter
         metrics.imageTag: v0.10.0
         replication.enabled: "true"
+        service.type: NodePort
         slave.persistence.enabled: "false"
+        slave.persistence.size: 8Gi
         slave.replicas: "2"
       name: MariaDB-aa
       targetNamespace: default
