@@ -3,7 +3,7 @@ stages:
   steps:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:library-mariadb
-      version: 3.0.3
+      version: 5.0.9
       name: MariaDB-aa
       targetNamespace: default
 timeout: 60
