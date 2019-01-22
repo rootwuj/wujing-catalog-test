@@ -24,9 +24,7 @@ stages:
       name: test-mariadb
       targetNamespace: default
     when:
-      branch:
-        include:
-        - aa
+      branch: {}
 - name: mysql
   steps:
   - applyAppConfig:
