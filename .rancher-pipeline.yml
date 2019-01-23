@@ -24,13 +24,36 @@ stages:
       name: test-mariadb
       targetNamespace: default
     when:
-      branch: {}
+      branch:
+        include:
+        - aa
 - name: mysql
   steps:
   - applyAppConfig:
-      catalogTemplate: p-jnrpd-test-mysql
-      version: 0.10.2
-      name: mysql-a
+      catalogTemplate: cattle-global-data:library-nfs-provisioner
+      version: 0.2.1
+      name: nfs-aa
       targetNamespace: default
+    when:
+      branch:
+        include:
+        - aa
+- name: publish
+  steps:
+  - publishCatalogConfig:
+      path: ./mongodb/latest/
+      catalogTemplate: mogoa
+      version: latest
+      gitUrl: https://github.com/rootwuj/test-catalog-custom.git
+      gitBranch: master
+      gitAuthor: aa
+      gitEmail: aa
+    envFrom:
+    - sourceName: password
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: password
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 timeout: 60
 notification: {}
