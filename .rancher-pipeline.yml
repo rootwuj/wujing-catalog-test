@@ -43,16 +43,16 @@ stages:
   - publishCatalogConfig:
       path: ./mongodb/latest/
       catalogTemplate: mogoa
-      version: latest
+      version: foo-1.0.0+build5
       gitUrl: https://github.com/rootwuj/test-catalog-custom.git
       gitBranch: master
       gitAuthor: aa
       gitEmail: aa
     envFrom:
-    - sourceName: password
+    - sourceName: test-pipeline
       sourceKey: USERNAME
       targetKey: USERNAME
-    - sourceName: password
+    - sourceName: test-pipeline
       sourceKey: PASSWORD
       targetKey: PASSWORD
 timeout: 60
